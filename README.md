@@ -1,7 +1,9 @@
-# This repository is live at https://nifty-swartz-81126a.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This repository is live at [courseinfo](https://nifty-swartz-81126a.netlify.app/).
 
 ## Available Scripts
 
