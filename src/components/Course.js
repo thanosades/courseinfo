@@ -1,8 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+
 
 const Header = ({ course }) => {
-  return (<h1>{course.name}</h1>)
+  return (<h2>{course.name}</h2>)
 }
 
 const Part = ({ part }) => {
@@ -19,13 +19,12 @@ const Content = ({ course }) => {
   )
 }
 
-const Total = (props) => {
-  const sum = props.parts.reduce((total, current) => {
+const Total = ({ course }) => {
+  const sum = course.parts.reduce((total, current) => {
     return total + current.exercises
   }, 0)
 
-  return (<p> Number of exercises {sum}
-  </p>)
+  return (<p className='total'>total of {sum} exercises</p>)
 }
 
 const Course = ({ course }) => {
@@ -33,6 +32,7 @@ const Course = ({ course }) => {
   <div>
     <Header course={course} />
     <Content course={course} />
+    <Total course={course} />
   </div>
   )
 }
